@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://te stng.org/testng-1.0.dtd">
+
+<suite verbose="1" name="Onlyfullstack Suite" parallel="tests" thread-count="1">
+
+<test name="Label Checking">
+<classes>
+    <class name="com.onlyfullstack.selenium.extentReporting.ExtentReporting"/>
+    <class name="com.onlyfullstack.selenium.extentReporting.ExtentReporting2"/>
+    <class name="com.onlyfullstack.selenium.extentReporting.ExtentReporting3"/>
+</classes>
+</test>
+<test name="Label Checking">
+<classes>
+    <class name="com.onlyfullstack.selenium.extentReporting.ExtentReporting"/>
+    <class name="com.onlyfullstack.selenium.extentReporting.ExtentReporting2"/>
+    <class name="com.onlyfullstack.selenium.extentReporting.ExtentReporting3"/>
+</classes>
+</test>
+        </suite>

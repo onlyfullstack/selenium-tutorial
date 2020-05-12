@@ -1,0 +1,194 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+    <div class="post-body-container">
+        <div class="post-body entry-content float-container" id="post-body-39246966950473039">
+            <title>Best Demo website to practice Selenium for beginners</title>
+            <script type="text/javascript">
+                function validate() {
+                    var isValid = true;
+                    if (document.myForm.Name.value == "") {
+                        document.getElementById("invalidName").style.display = "block";
+                        document.myForm.Name.focus();
+                        isValid = false;
+                    } else {
+                        document.getElementById("invalidName").style.display = "none";
+                    }
+                    if (document.myForm.EMail.value == "") {
+                        document.getElementById("invalidEMail").style.display = "block";
+                        document.myForm.EMail.focus();
+                        isValid = false;
+                    } else {
+                        document.getElementById("invalidEMail").style.display = "none";
+                    }
+                    if (document.myForm.gender.value == "") {
+                        document.getElementById("invalidGender").style.display = "block";
+                        document.myForm.EMail.focus();
+                        isValid = false;
+                    } else {
+                        document.getElementById("invalidGender").style.display = "none";
+                    }
+                    if (document.myForm.Zip.value == "" || isNaN(document.myForm.Zip.value) ||
+                        document.myForm.Zip.value.length != 5) {
+                        document.getElementById("invalidZip").style.display = "block";
+                        document.myForm.Name.focus();
+                        isValid = false;
+                    } else {
+                        document.getElementById("invalidZip").style.display = "none";
+                    }
+                    if (document.myForm.Country.value == "-1") {
+                        document.getElementById("invalidCountry").style.display = "block";
+                        document.myForm.Country.focus();
+                        isValid = false;
+                    } else {
+                        document.getElementById("invalidCountry").style.display = "none";
+                    }
+                    if (document.myForm.about.value == "") {
+                        document.getElementById("invalidAbout").style.display = "block";
+                        document.myForm.about.focus();
+                        isValid = false;
+                    } else {
+                        document.getElementById("invalidAbout").style.display = "none";
+                    }
+                    if (document.myForm.mobileNumber.value == "" || isNaN(document.myForm.mobileNumber.value) ||
+                        document.myForm.mobileNumber.value.length != 10) {
+                        document.getElementById("invalidMobileNumber").style.display = "block";
+                        document.myForm.about.focus();
+                        isValid = false;
+                    } else {
+                        document.getElementById("invalidMobileNumber").style.display = "none";
+                    }
+                    if (! (document.myForm.hobby1.checked || document.myForm.hobby2.checked || document.myForm.hobby3.checked)) {
+                        document.getElementById("invalidHobby").style.display = "block";
+                        isValid = false;
+                    } else {
+                        document.getElementById("invalidHobby").style.display = "none";
+                    }
+                    return isValid;
+                }
+
+                function submitForm() {
+                    if (validate()) {
+                        alert("Saved successfully");
+                        document.myForm.reset();
+                    }
+                }
+            </script>
+            <style>
+                .error {
+                    color: red;
+                    display: none;
+                    font-weight: bold;
+                }
+                td {
+                    padding: 5px;
+                }
+                td[align="right"] {
+                    font-weight: bold;
+                }
+                tr {
+                    padding-bottom: 10px;
+                }
+            </style>
+            <div class="registration-form" id="form-tutorial-selenium">
+                <h1 style="color: #0606a5; font-weight: bold;">
+                    <span style="font-size: x-large;">Best Demo website to practice Selenium for beginners - Only Fullstack Developer</span>
+                </h1>
+                <form name="myForm">
+                    <table style="border-collapse: separate; border-spacing: 0 9px;">
+                        <tbody>
+                        <tr>
+                            <td align="right">Name</td>
+                            <td><input id="name-text-field-id" name="Name" type="text"/></td>
+                            <td><span class="error" id="invalidName">Please provide your name</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Email</td>
+                            <td><input class="email-text-field-class" name="EMail" type="text"/></td>
+                            <td><span class="error" id="invalidEMail">Please provide your Email</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Zip Code</td>
+                            <td><input name="Zip" type="text"/></td>
+                            <td><span class="error" id="invalidZip">Please provide your zip code in 5 digits</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Mobile Number</td>
+                            <td><input name="mobileNumber" type="text"/></td>
+                            <td><span class="error"
+                                      id="invalidMobileNumber">Please provide your 10 digit Mobile Number</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Gender</td>
+                            <td>
+                                <input id="male" name="gender" type="radio" value="male"/><label for="male"
+                                                                                                 style="padding-left: 7px;">Male</label>
+                                <input id="female" name="gender" type="radio" value="female"/><label for="female"
+                                                                                                     style="padding-left: 7px;">Female</label>
+                                <input id="other" name="gender" type="radio" value="other"/><label for="other"
+                                                                                                   style="padding-left: 7px;">Other</label>
+                            </td>
+                            <td><span class="error" id="invalidGender">Please select your gender</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Country</td>
+                            <td>
+                                <select name="Country">
+                                    <option selected="" value="-1">Choose</option>
+                                    <option value="1">India</option>
+                                    <option value="2">UK</option>
+                                    <option value="3">USA</option>
+                                </select></td>
+                            <td><span class="error" id="invalidCountry">Please select your country</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Hobbies</td>
+                            <td>
+                                <input id="hobby1" name="hobby1" type="checkbox" value="hobby1"/><label for="hobby1">Singing</label>
+                                <input id="hobby2" name="hobby2" type="checkbox" value="hobby2"/><label for="hobby2">Playing</label>
+                                <input id="hobby3" name="hobby3" type="checkbox" value="hobby3"/><label for="hobby3">Travelling</label>
+                            </td>
+                            <td><span class="error" id="invalidHobby">Please select your Hobbies</span></td>
+                        </tr>
+                        <tr>
+                            <td align="right">About yourself -</td>
+                            <td><textarea cols="30" name="about" rows="4" type="textarea"></textarea></td>
+                            <td><span class="error" id="invalidAbout">Please provide about yourself</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><a href="https://www.blogger.com/blogger.g?blogID=6274355480851484840"
+                                               onclick="alert('Terms and conditions clicked'); return false;">Terms and
+                                Conditions</a></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 50px;"><input onclick="submitForm()" type="button" value="Submit"/>
+                            </td>
+                            <td style="padding-left: 100px;"><input type="reset" value="Clear"/></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <table id="alert-tutorial">
+                    <tbody>
+                    <tr>
+                        <td><h1 style="color: #0606a5; font-weight: bold;">
+                            <span style="font-size: x-large;">Alert types in Selenium - Only Fullstack Developer</span>
+                        </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.blogger.com/blogger.g?blogID=6274355480851484840"
+                               onclick="alert('Welcome to Only Fullstack Selenium Tutorial'); return false;">Simple Alert</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.blogger.com/blogger.g?blogID=6274355480851484840"
+                               onclick="confirm('Do you want to continue?'); return false;">Confirm Alert</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.blogger.com/blogger.g?blogID=6274355480851484840"
+                               onclick="prompt('Enter your name','OnlyFullStack'); return false;">Prompt Alert</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
